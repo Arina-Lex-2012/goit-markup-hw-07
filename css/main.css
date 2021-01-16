@@ -146,7 +146,7 @@ a {
   margin: 0;
 }
 
-.list .current {
+.current {
   color: var(--accents);
 }
 
@@ -394,8 +394,8 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:hover .form-icon,
-.form-input:focus .form-icon {
+.form-input:hover ~ .form-icon,
+.form-input:focus ~ .form-icon {
   fill: var(--accents);
 }
 
@@ -669,8 +669,6 @@ textarea {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  padding-top: 33px;
-  padding-bottom: 31px;
 }
 
 .hero {
@@ -1054,7 +1052,7 @@ textarea {
   color: var(--primary-text-color);
 }
 
-.social-list {
+.team-card-set .social-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1113,6 +1111,12 @@ textarea {
   --primary-bg-color: #2f303a;
   --portfolio-cards-gap: 30px;
   --fill-icon: #afb1b8;
+}
+
+.about-card-set, .clients-card-set, .features-card-set, .footer-list, .footer-list-contacts, .social-list, .address-nav .item, .hero-content, .portfolio-button-set, .portfolio-card-set, .team-card-set {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {

@@ -5,6 +5,7 @@
 }
 
 .footer-list {
+  @extend %list;
   display: flex;
 }
 
@@ -22,6 +23,10 @@
 
 .footer-logo span {
   color: var(--accents);
+}
+
+.footer-list-contacts {
+  @extend %list;
 }
 
 .footer-list-contacts .item:not(:last-child) {
@@ -58,12 +63,18 @@
   color: #ffffff;
 }
 
-.footer-list-item:first-child {
-  margin-right: 70px;
+.footer-list-item {
+  &:first-child {
+    margin-right: 70px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 93px;
+  }
 }
 
-.footer-list-item:nth-child(2) {
-  margin-right: 93px;
+.social-list {
+  @extend %list;
 }
 
 .footer-list .social-list {

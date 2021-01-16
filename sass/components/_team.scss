@@ -5,6 +5,7 @@
 }
 
 .team-card-set {
+  @extend %list;
   display: flex;
   margin-left: calc(-1 * var(--portfolio-cards-gap));
 }
@@ -42,7 +43,7 @@
   color: var(--primary-text-color);
 }
 
-.social-list {
+.team-card-set .social-list {
   display: flex;
   justify-content: space-between;
 

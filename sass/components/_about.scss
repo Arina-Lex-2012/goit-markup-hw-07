@@ -3,6 +3,7 @@
 }
 
 .about-card-set {
+  @extend %list;
   display: flex;
   margin-left: calc(-1 * var(--portfolio-cards-gap));
 }

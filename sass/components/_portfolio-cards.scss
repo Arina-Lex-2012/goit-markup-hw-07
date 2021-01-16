@@ -1,4 +1,5 @@
 .portfolio-card-set {
+  @extend %list;
   display: flex;
   flex-wrap: wrap;
 

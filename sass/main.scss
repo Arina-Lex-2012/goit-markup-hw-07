@@ -3,7 +3,7 @@
 @import "components/container";
 @import "components/features";
 @import "components/footer";
-@import "components/form-service";
+@import "components/form-agreement";
 @import "components/form-subscribe";
 @import "components/header-address";
 @import "components/hero";
@@ -13,6 +13,7 @@
 @import "components/portfolio-cards";
 @import "components/team";
 @import "utils/variables";
+@import "utils/placeholders";
 
 body {
   font-family: Roboto, sans-serif;
