@@ -1,0 +1,42 @@
+.address-nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.address-nav .item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.emailtel-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+
+  .nav-emailtel:hover &,
+  .nav-emailtel:focus & {
+    fill: var(--accents);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.nav-emailtel {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
+  padding-top: 33px;
+  padding-bottom: 31px;
+}
