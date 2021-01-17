@@ -9,49 +9,17 @@
   display: flex;
 }
 
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
+.footer-list__item {
+  &:first-child {
+    margin-right: 70px;
+  }
 
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  &:nth-child(2) {
+    margin-right: 93px;
+  }
 }
 
-.footer-logo span {
-  color: var(--accents);
-}
-
-.footer-list-contacts {
-  @extend %list;
-}
-
-.footer-list-contacts .item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-emailtel {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-map {
-  display: inline-block;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-}
-
-.footer-title {
+.footer-list__title {
   padding-top: 12px;
   font-weight: 700;
   font-size: 14px;
@@ -63,42 +31,71 @@
   color: #ffffff;
 }
 
-.footer-list-item {
-  &:first-child {
-    margin-right: 70px;
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+
+  & span {
+    color: var(--accents);
+  }
+}
+
+.footer-list-contacts {
+  @extend %list;
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
   }
 
-  &:nth-child(2) {
-    margin-right: 93px;
+  &__emailtel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__map {
+    display: inline-block;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #ffffff;
   }
 }
 
 .social-list {
   @extend %list;
+
+  .footer-list & {
+    display: flex;
+    padding: 0px;
+  }
+
+  .footer-list__item &__item:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
-.footer-list .social-list {
-  display: flex;
-  padding: 0px;
-}
-
-.footer-list-item .social-list .item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.footer-list-item .social-list-link {
+.social-list__link {
   background: rgba(255, 255, 255, 0.1);
 
   transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background: var(--accents);
-  }
 }
 
-.footer-list-item .social-list-icon {
-  fill: #ffffff;
+.social-list__icon {
+  .footer-list__item & {
+    fill: #ffffff;
+  }
 }

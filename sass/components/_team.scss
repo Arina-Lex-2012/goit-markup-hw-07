@@ -8,49 +8,51 @@
   @extend %list;
   display: flex;
   margin-left: calc(-1 * var(--portfolio-cards-gap));
+
+  &__item {
+    flex-basis: calc(100% / 3 - var(--portfolio-cards-gap));
+    margin-left: var(--portfolio-cards-gap);
+
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+  }
 }
 
-.team-card-set > .item {
-  flex-basis: calc(100% / 3 - var(--portfolio-cards-gap));
-  margin-left: var(--portfolio-cards-gap);
+.social-list {
+  @extend %list;
 
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  .team-card-set & {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 16px 32px 30px 32px;
+  }
 }
 
-.team-card-content {
-  text-align: center;
-}
-
-.team-title {
-  padding-top: 30px;
-  padding-bottom: 10px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-}
-
-.team-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-}
-
-.team-card-set .social-list {
-  display: flex;
-  justify-content: space-between;
-
-  padding: 16px 32px 30px 32px;
-}
-
-.social-list-link {
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +70,7 @@
   }
 }
 
-.social-list-icon {
+.social-list__icon {
   width: 20px;
   height: 20px;
   fill: var(--fill-icon);
@@ -77,8 +79,8 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .social-list-link:hover &,
-  .social-list-link:focus & {
+  .social-list__link:hover &,
+  .social-list__link:focus & {
     fill: #ffffff;
   }
 }

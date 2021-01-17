@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.clients-link {
+.clients-card-set__link {
   display: flex;
   justify-content: center;
   align-items: space-between;
@@ -30,7 +30,7 @@
   }
 }
 
-.clients-icon {
+.clients-card-set__icon {
   fill: var(--fill-icon);
 
   transition-property: fill;

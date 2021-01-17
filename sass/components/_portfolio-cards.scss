@@ -6,7 +6,7 @@
   margin-top: calc(-1 * var(--portfolio-cards-gap));
 }
 
-.portfolio-card-set .item {
+.portfolio-card-set__item {
   outline: 1px solid #eeeeee;
 
   margin-top: var(--portfolio-cards-gap);
@@ -29,22 +29,21 @@
 .portfolio-card-content {
   padding: 20px 24px;
   background-color: #ffffff;
-}
+  &__title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-text-color);
 
-.portfolio-title {
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--title-text-color);
+    margin-bottom: 4px;
+  }
 
-  margin-bottom: 4px;
-}
-
-.portfolio-text {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  &__text {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+  }
 }
 
 .portfolio-card-thumb {
