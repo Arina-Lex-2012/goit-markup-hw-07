@@ -18,10 +18,6 @@
   }
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -220,6 +216,17 @@
   margin-right: 7px;
 
   .policy__checkbox:checked + & {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    background-origin: border-box;
+    background-image: url('../images/icon-check.svg');
+  }
+
+  .policy__checkbox:focus + & {
+    border-color: $accent-color;
+  }
+
+  .policy__checkbox:checked:focus + & {
     background-color: $accent-color;
     border-color: $accent-color;
     background-origin: border-box;
